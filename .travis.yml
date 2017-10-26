@@ -1,6 +1,16 @@
 language: c
 sudo: false
-script: make
 
 notifications:
   email: false
+
+env:
+  - MAKE_TARGET=''
+  - MAKE_TARGET='bench'
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: MAKE_TARGET='bench'
+
+script: make -j $MAKE_TARGET
