@@ -33,7 +33,7 @@ CC = gcc
 CXX = g++
 CFLAGS = -std=gnu11
 CXXFLAGS = -std=gnu++11
-CPPFLAGS += -Wall -Wextra -g -DDEBUG
+CPPFLAGS += -Wall -Wextra -g -DDEBUG -O3
 CPPFLAGS += -MT $@ -MMD -MP -MF $(@:.o=.d)
 CPPFLAGS += $(addprefix -I $(SRCDIR)/, $(INCDIRS))
 CPPFLAGS += $(addprefix -isystem $(SRCDIR)/, $(SYSINCDIRS))
